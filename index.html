@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>BillBuddy – Split the bill, not the friendship</title>
+<style>
+:root{--bg:#f1f5f3;--ink:#102a2e;--mute:#5b7174;--teal:#0e7c7b;--coin:#f6c945;--paper:#fffdf7;color-scheme:light}
+@media(prefers-color-scheme:dark){:root{--bg:#0d1d20;--ink:#eaf3f1;--mute:#8fa8aa;--teal:#37c2b8;--paper:#16292d;color-scheme:dark}}
+*{box-sizing:border-box;margin:0}
+body{background:var(--bg);color:var(--ink);font-family:ui-rounded,"Avenir Next","Segoe UI",system-ui,sans-serif;min-height:100vh;line-height:1.5}
+.wrap{max-width:1020px;margin:0 auto;padding:28px 22px 60px}
+.logo{display:flex;align-items:center;gap:10px;font-weight:800;font-size:1.2rem;letter-spacing:-.02em}
+.logo i{width:30px;height:30px;border-radius:50%;background:var(--coin);display:grid;place-items:center;color:#102a2e;font-style:normal;font-size:1rem;box-shadow:inset 0 0 0 3px rgba(16,42,46,.15)}
+.hero{display:grid;grid-template-columns:1.1fr .9fr;gap:48px;align-items:center;padding:70px 0 30px}
+h1{font-size:clamp(2.6rem,7vw,4.9rem);line-height:.98;letter-spacing:-.045em;font-weight:900}
+.lead{margin:22px 0 32px;font-size:1.15rem;color:var(--mute);max-width:42ch}
+.btn{display:inline-block;background:var(--ink);color:var(--bg);padding:16px 30px;border-radius:999px;font-weight:700;text-decoration:none;font-size:1.05rem;transition:transform .15s,box-shadow .15s}
+.btn:hover{transform:translateY(-2px);box-shadow:0 10px 24px -8px var(--ink)}
+.btn:focus-visible{outline:3px solid var(--teal);outline-offset:3px}
+.receipt{background:var(--paper);padding:28px 26px 34px;border-radius:6px 6px 0 0;font-family:ui-monospace,"SF Mono",Menlo,Consolas,monospace;font-size:.92rem;box-shadow:0 24px 50px -24px rgba(16,42,46,.45);transform:rotate(2deg);position:relative;
+-webkit-mask:conic-gradient(from -45deg at bottom,#0000,#000 1deg 89deg,#0000 90deg) 50%/16px 100%;mask:conic-gradient(from -45deg at bottom,#0000,#000 1deg 89deg,#0000 90deg) 50%/16px 100%}
+.receipt h3{font-family:inherit;text-align:center;font-size:1rem;margin-bottom:4px}
+.receipt .c{text-align:center;color:var(--mute);font-size:.8rem;margin-bottom:14px}
+.row{display:flex;justify-content:space-between;padding:5px 0}
+.rule{border-top:2px dashed var(--mute);opacity:.5;margin:12px 0}
+.each{display:flex;justify-content:space-between;align-items:center;font-weight:800;font-size:1.25rem}
+.each b{background:var(--coin);color:#102a2e;padding:2px 12px;border-radius:6px}
+.points{display:grid;grid-template-columns:repeat(3,1fr);gap:28px;margin-top:70px}
+.points h2{font-size:1.1rem;margin-bottom:6px}
+.points p{color:var(--mute);font-size:.98rem}
+.points div{border-top:3px solid var(--teal);padding-top:16px}
+footer{margin-top:70px;color:var(--mute);font-size:.85rem}
+@media(max-width:760px){.hero{grid-template-columns:1fr;padding-top:40px;gap:40px}.points{grid-template-columns:1fr;margin-top:50px}.receipt{transform:none}}
+@media(prefers-reduced-motion:reduce){.btn{transition:none}}
+</style>
+</head>
+<body>
+<div class="wrap">
+<div class="logo"><i>₹</i>BillBuddy</div>
+<section class="hero">
+<div>
+<h1>Split the bill, not the friendship.</h1>
+<p class="lead">Enter the total, add the tip, and see exactly what everyone owes in seconds. Split evenly or by what each person ordered.</p>
+<a class="btn" href="home.html">Start splitting</a>
+</div>
+<div class="receipt" aria-hidden="true">
+<h3>BILLBUDDY CAFÉ</h3>
+<div class="c">Table 7 · Friday night</div>
+<div class="row"><span>Subtotal</span><span>₹2,400.00</span></div>
+<div class="row"><span>Tip (20%)</span><span>₹480.00</span></div>
+<div class="rule"></div>
+<div class="row"><span>Total</span><span>₹2,880.00</span></div>
+<div class="row"><span>Split 4 ways</span><span></span></div>
+<div class="rule"></div>
+<div class="each"><span>Each pays</span><b>₹720.00</b></div>
+</div>
+</section>
+<section class="points">
+<div><h2>Even split</h2><p>Pick the number of people and the tip. Everyone pays the same share.</p></div>
+<div><h2>By person</h2><p>Add what each person ordered. Tip is shared in proportion to their food.</p></div>
+<div><h2>Round up</h2><p>Round each share to the next whole dollar so paying up is easy.</p></div>
+</section>
+<footer>BillBuddy runs entirely in your browser. Nothing you type is saved or sent anywhere.</footer>
+</div>
+</body>
+</html>
